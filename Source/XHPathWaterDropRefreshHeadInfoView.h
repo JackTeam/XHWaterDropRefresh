@@ -13,6 +13,16 @@ extern NSString *const XHBirthdayKey;
 
 @interface XHPathWaterDropRefreshHeadInfoView : UIView
 
+// parallax background
+@property (nonatomic, strong) UIImageView *bannerImageView;
+@property (nonatomic, strong) UIImageView *bannerImageViewWithImageEffects;
+
+// user info
+@property (nonatomic, strong) UIButton *avatarButton;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UILabel *birthdayLabel;
+
+
 //scrollView call back
 @property (nonatomic) BOOL touching;
 @property (nonatomic) CGFloat offsetY;
@@ -25,12 +35,14 @@ extern NSString *const XHBirthdayKey;
 
 - (void)stopRefresh;
 
-// background
+// background image
 - (void)setBackgroundImage:(UIImage *)backgroundImage;
+// custom set url for subClass， There is not work
 - (void)setBackgroundURL:(NSURL *)url;
 
-// avatar
+// avatar image
 - (void)setAvatarImage:(UIImage *)avatarImage;
+// custom set url for subClass， There is not work
 - (void)setAvatarURL:(NSURL *)url;
 
 // set info, Example : NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:@"Jack", @"userName", @"1990-10-19", @"birthday", nil];

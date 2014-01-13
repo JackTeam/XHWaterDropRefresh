@@ -19,6 +19,8 @@
 		AB30D152188433520052BBAA /* meicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30D14B188433520052BBAA /* meicon.png */; };
 		AB30D153188433520052BBAA /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30D14C188433520052BBAA /* MenuBackground@2x.png */; };
 		AB30D154188433520052BBAA /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30D14C188433520052BBAA /* MenuBackground@2x.png */; };
+		AB30D156188440AE0052BBAA /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB30D155188440AE0052BBAA /* Background.jpg */; };
+		AB30D157188440AE0052BBAA /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB30D155188440AE0052BBAA /* Background.jpg */; };
 		AB8497221883FB3F0080B16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497211883FB3F0080B16E /* Foundation.framework */; };
 		AB8497241883FB3F0080B16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497231883FB3F0080B16E /* CoreGraphics.framework */; };
 		AB8497261883FB3F0080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
@@ -73,6 +75,7 @@
 		AB30D14A188433520052BBAA /* first_timetowlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_timetowlight@2x.png"; sourceTree = "<group>"; };
 		AB30D14B188433520052BBAA /* meicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meicon.png; sourceTree = "<group>"; };
 		AB30D14C188433520052BBAA /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBackground@2x.png"; sourceTree = "<group>"; };
+		AB30D155188440AE0052BBAA /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		AB84971E1883FB3F0080B16E /* XHWaterDropRefreshstoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHWaterDropRefreshstoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8497211883FB3F0080B16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB8497231883FB3F0080B16E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +161,7 @@
 		AB30D148188433520052BBAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB30D155188440AE0052BBAA /* Background.jpg */,
 				AB30D149188433520052BBAA /* first_timetowlight.png */,
 				AB30D14A188433520052BBAA /* first_timetowlight@2x.png */,
 				AB30D14B188433520052BBAA /* meicon.png */,
@@ -424,6 +428,7 @@
 				AB8497351883FB3F0080B16E /* Main_iPhone.storyboard in Resources */,
 				AB84972C1883FB3F0080B16E /* InfoPlist.strings in Resources */,
 				AB30D153188433520052BBAA /* MenuBackground@2x.png in Resources */,
+				AB30D156188440AE0052BBAA /* Background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +447,7 @@
 				AB84977E188406E30080B16E /* Images.xcassets in Resources */,
 				AB30D152188433520052BBAA /* meicon.png in Resources */,
 				AB84976D188406E30080B16E /* InfoPlist.strings in Resources */,
+				AB30D157188440AE0052BBAA /* Background.jpg in Resources */,
 				AB30D154188433520052BBAA /* MenuBackground@2x.png in Resources */,
 				AB30D150188433520052BBAA /* first_timetowlight@2x.png in Resources */,
 				AB30D14E188433520052BBAA /* first_timetowlight.png in Resources */,

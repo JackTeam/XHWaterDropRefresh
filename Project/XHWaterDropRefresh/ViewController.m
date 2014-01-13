@@ -26,8 +26,9 @@
     
     
     _pathWaterDropRefreshHeadInfoView = [[XHPathWaterDropRefreshHeadInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
-    [_pathWaterDropRefreshHeadInfoView setBackgroundImage:[UIImage imageNamed:@"MenuBackground"]];
+    [_pathWaterDropRefreshHeadInfoView setBackgroundImage:[UIImage imageNamed:@"Background.jpg"]];
     [_pathWaterDropRefreshHeadInfoView setAvatarImage:[UIImage imageNamed:@"meicon.png"]];
+    [_pathWaterDropRefreshHeadInfoView setInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Jack", XHUserNameKey, @"1990-10-19", XHBirthdayKey, nil]];
     
     self.tableView.tableHeaderView = self.pathWaterDropRefreshHeadInfoView;
     
@@ -51,6 +52,18 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     _pathWaterDropRefreshHeadInfoView.offsetY = scrollView.contentOffset.y;
+    
+    CGFloat padding = 80.0;
+    CGFloat mub = 1.15;
+    if(scrollView.contentOffset.y < 0 && scrollView.contentOffset.y >= -padding) {
+        float percent = (-scrollView.contentOffset.y / (padding * mub));
+        _pathWaterDropRefreshHeadInfoView.bannerImageViewWithImageEffects.alpha = percent;
+        
+    } else if (scrollView.contentOffset.y <= -padding) {
+        _pathWaterDropRefreshHeadInfoView.bannerImageViewWithImageEffects.alpha = padding / (padding * mub);
+    } else if (scrollView.contentOffset.y > padding) {
+        _pathWaterDropRefreshHeadInfoView.bannerImageViewWithImageEffects.alpha = 0;
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
