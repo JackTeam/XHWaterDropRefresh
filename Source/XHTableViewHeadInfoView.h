@@ -10,4 +10,22 @@
 
 @interface XHTableViewHeadInfoView : UIView
 
+//scrollView call back
+@property (nonatomic) BOOL touching;
+@property (nonatomic) float offsetY;
+
+@property (nonatomic, assign) CGFloat tableViewHeadInfoViewHeight;
+
+@property (nonatomic, copy) void(^handleRefreshEvent)(void);
+
+- (void)stopRefresh;
+
+// background
+- (void)setBackgroundImage:(UIImage *)backgroundImage;
+- (void)setBackgroundURL:(NSURL *)url;
+
+// avatar
+- (void)setAvatarImage:(UIImage *)backgroundImage;
+- (void)setAvatarURL:(NSURL *)url;
+
 @end

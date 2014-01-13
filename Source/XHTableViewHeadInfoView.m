@@ -7,16 +7,70 @@
 //
 
 #import "XHTableViewHeadInfoView.h"
+#import "XHWaterDropRefresh.h"
+
+@interface XHTableViewHeadInfoView () {
+    BOOL touch1, touch2, hasStop;
+    BOOL isrefreshed;
+}
+
+@property (nonatomic, strong) UIImageView *bannerImageView;
+@property (nonatomic, strong) UIButton *avatarButton;
+@property (nonatomic, strong) XHWaterDropRefresh *waterDropRefresh;
+@property (nonatomic, strong) UIView *showView;
+
+@end
 
 @implementation XHTableViewHeadInfoView
+
+#pragma mark - Publish Api
+
+- (void)stopRefresh {
+    
+}
+
+// background
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    
+}
+
+- (void)setBackgroundURL:(NSURL *)url {
+    
+}
+
+// avatar
+- (void)setAvatarImage:(UIImage *)backgroundImage {
+    
+}
+
+- (void)setAvatarURL:(NSURL *)url {
+    
+}
+
+#pragma mark - Life cycle
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self _setup];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self)
+    {
+        [self _setup];
+    }
+    return self;
+}
+
+- (void)_setup {
+    
 }
 
 /*
