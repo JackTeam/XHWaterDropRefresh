@@ -47,6 +47,11 @@
     
 }
 
+// set info
+- (void)setInfo:(NSDictionary *)info {
+    
+}
+
 #pragma mark - Life cycle
 
 - (id)initWithFrame:(CGRect)frame

@@ -28,4 +28,7 @@
 - (void)setAvatarImage:(UIImage *)backgroundImage;
 - (void)setAvatarURL:(NSURL *)url;
 
+// set info, Example : NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:@"Jack", @"userName", @"1990-10-19", @"birthday", nil];
+- (void)setInfo:(NSDictionary *)info;
+
 @end
