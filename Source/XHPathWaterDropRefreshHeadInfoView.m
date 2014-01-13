@@ -1,18 +1,18 @@
 //
-//  XHTableViewHeadInfoView.m
+//  XHPathWaterDropRefreshHeadInfoView.m
 //  XHWaterDropRefresh
 //
 //  Created by 曾 宪华 on 14-1-13.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507. All rights reserved.
 //
 
-#import "XHTableViewHeadInfoView.h"
+#import "XHPathWaterDropRefreshHeadInfoView.h"
 #import "XHWaterDropRefresh.h"
 
 NSString *const XHUserNameKey = @"XHUserName";
 NSString *const XHBirthdayKey = @"XHBirthday";
 
-@interface XHTableViewHeadInfoView () {
+@interface XHPathWaterDropRefreshHeadInfoView () {
     BOOL touch1, touch2, hasStop;
     BOOL isrefreshed;
 }
@@ -27,16 +27,12 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 
 @property (nonatomic, strong) XHWaterDropRefresh *waterDropRefresh;
 
-
 @end
 
-@implementation XHTableViewHeadInfoView
+@implementation XHPathWaterDropRefreshHeadInfoView
+
 
 #pragma mark - Publish Api
-
-- (void)stopRefresh {
-    
-}
 
 // background
 - (void)setBackgroundImage:(UIImage *)backgroundImage {
@@ -114,7 +110,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(93, 18, 207, 34)];
     
     _birthdayLabel = [[UILabel alloc] initWithFrame:CGRectMake(93, 60, 207, 24)];
-
+    
     [_showView addSubview:self.userNameLabel];
     [_showView addSubview:self.birthdayLabel];
     
@@ -136,8 +132,8 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 }
 
 - (void)initWaterView {
-    __weak XHTableViewHeadInfoView *wself =self;
-    [_waterView setHandleRefreshEvent:^{
+    __weak XHPathWaterDropRefreshHeadInfoView *wself =self;
+    [_waterDropRefresh setHandleRefreshEvent:^{
         [wself setIsRefreshed:YES];
         if(wself.handleRefreshEvent)
         {
@@ -169,12 +165,12 @@ NSString *const XHBirthdayKey = @"XHBirthday";
         {
             touch2 = YES;
         }
-        else if(touch2 == NO && _waterView.isRefreshing == NO)
+        else if(touch2 == NO && _waterDropRefresh.isRefreshing == NO)
         {
             touch1 = YES;
         }
     }
-    else if(_waterView.isRefreshing == NO)
+    else if(_waterDropRefresh.isRefreshing == NO)
     {
         [self resetTouch];
     }
@@ -189,7 +185,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 }
 
 - (void)stopRefresh {
-    [_waterView stopRefresh];
+    [_waterDropRefresh stopRefresh];
     if(_touching == NO) {
         [self resetTouch];
     } else {
@@ -201,7 +197,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     _offsetY = y;
     CGRect frame = _showView.frame;
     if(y < 0) {
-        if((_waterView.isRefreshing) || hasStop) {
+        if((_waterDropRefresh.isRefreshing) || hasStop) {
             if(touch1 && touch2 == NO) {
                 frame.origin.y = self.offsetHeight + y;
                 _showView.frame = frame;
@@ -225,7 +221,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
         }
     }
     if (hasStop == NO) {
-        _waterView.currentOffset = y;
+        _waterDropRefresh.currentOffset = y;
     }
     
     UIView *bannerSuper = _bannerImageView.superview;
@@ -253,12 +249,12 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

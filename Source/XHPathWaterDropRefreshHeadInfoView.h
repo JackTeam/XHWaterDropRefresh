@@ -1,5 +1,5 @@
 //
-//  XHTableViewHeadInfoView.h
+//  XHPathWaterDropRefreshHeadInfoView.h
 //  XHWaterDropRefresh
 //
 //  Created by 曾 宪华 on 14-1-13.
@@ -11,7 +11,7 @@
 extern NSString *const XHUserNameKey;
 extern NSString *const XHBirthdayKey;
 
-@interface XHTableViewHeadInfoView : UIView
+@interface XHPathWaterDropRefreshHeadInfoView : UIView
 
 //scrollView call back
 @property (nonatomic) BOOL touching;
