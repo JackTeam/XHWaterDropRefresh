@@ -10,4 +10,14 @@
 
 @interface XHWaterDropRefresh : UIView
 
+@property (nonatomic, assign) CGFloat radius;
+@property (nonatomic, assign) CGFloat maxOffset;
+@property (nonatomic, readonly) BOOL isRefreshing;
+
+- (void)stopRefresh;
+- (void)startRefreshAnimation;
+
+@property (nonatomic, copy) void(^handleRefreshEvent)(void) ;
+@property (nonatomic) float currentOffset;
+
 @end
