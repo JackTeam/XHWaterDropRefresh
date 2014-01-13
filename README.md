@@ -13,6 +13,50 @@ XHWaterDropRefresh是一款类似Path's的下拉刷新的组件.
 2、视觉差的背景图      
 3、在视觉差背景嵌套头像控件      
 
+## Ease to use
+## 使用简单
+English:Propertys for pathWaterDropRefreshHeadInfoView.      
+中文:让pathWaterDropRefreshHeadInfoView为属性.       
+``` objective-c   
+    XHPathWaterDropRefreshHeadInfoView *pathWaterDropRefreshHeadInfoView = [[XHPathWaterDropRefreshHeadInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 140)];
+    [pathWaterDropRefreshHeadInfoView setBackgroundImage:[UIImage imageNamed:@"MenuBackground"]];
+    [pathWaterDropRefreshHeadInfoView setAvatarImage:[UIImage imageNamed:@"meicon.png"]];
+    [pathWaterDropRefreshHeadInfoView setInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Jack", XHUserNameKey, @"1990-10-19", XHBirthdayKey, nil]];
+    self.tableView.tableHeaderView = pathWaterDropRefreshHeadInfoView;
+    
+    self.pathWaterDropRefreshHeadInfoView = pathWaterDropRefreshHeadInfoView;
+    
+    __weak ViewController *wself = self;
+    [pathWaterDropRefreshHeadInfoView setHandleRefreshEvent:^{
+        double delayInSeconds = 4.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [wself.pathWaterDropRefreshHeadInfoView stopRefresh];
+        });
+    }];
+```
+``` objective-c   
+#pragma mark- scroll delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.offsetY = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.touching = NO;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if(decelerate == NO) {
+        _pathWaterDropRefreshHeadInfoView.touching = NO;
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.touching = YES;
+}
+
+```
 
 
 
