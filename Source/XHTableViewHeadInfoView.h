@@ -20,6 +20,8 @@
 
 - (void)stopRefresh;
 
+- (void)reloadData;
+
 // background
 - (void)setBackgroundImage:(UIImage *)backgroundImage;
 - (void)setBackgroundURL:(NSURL *)url;
