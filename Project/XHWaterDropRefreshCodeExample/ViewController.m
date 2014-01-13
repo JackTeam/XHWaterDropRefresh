@@ -32,6 +32,8 @@
     
     
     _pathWaterDropRefreshHeadInfoView = [[XHPathWaterDropRefreshHeadInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
+    [_pathWaterDropRefreshHeadInfoView setBackgroundImage:[UIImage imageNamed:@"MenuBackground"]];
+    [_pathWaterDropRefreshHeadInfoView setAvatarImage:[UIImage imageNamed:@"meicon.png"]];
     self.tableView.tableHeaderView = self.pathWaterDropRefreshHeadInfoView;
     
     __weak ViewController *wself = self;

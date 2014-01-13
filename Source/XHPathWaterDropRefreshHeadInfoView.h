@@ -30,7 +30,7 @@ extern NSString *const XHBirthdayKey;
 - (void)setBackgroundURL:(NSURL *)url;
 
 // avatar
-- (void)setAvatarImage:(UIImage *)backgroundImage;
+- (void)setAvatarImage:(UIImage *)avatarImage;
 - (void)setAvatarURL:(NSURL *)url;
 
 // set info, Example : NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:@"Jack", @"userName", @"1990-10-19", @"birthday", nil];

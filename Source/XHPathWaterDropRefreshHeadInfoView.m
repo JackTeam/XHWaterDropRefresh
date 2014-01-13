@@ -36,7 +36,9 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 
 // background
 - (void)setBackgroundImage:(UIImage *)backgroundImage {
-    
+    if (backgroundImage) {
+        _bannerImageView.image = backgroundImage;
+    }
 }
 
 - (void)setBackgroundURL:(NSURL *)url {
@@ -44,8 +46,10 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 }
 
 // avatar
-- (void)setAvatarImage:(UIImage *)backgroundImage {
-    
+- (void)setAvatarImage:(UIImage *)avatarImage {
+    if (avatarImage) {
+        [_avatarButton setImage:avatarImage forState:UIControlStateNormal];
+    }
 }
 
 - (void)setAvatarURL:(NSURL *)url {
@@ -74,8 +78,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 
 #pragma mark - Life cycle
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -84,8 +87,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+- (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if(self)
     {
@@ -95,7 +97,11 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 }
 
 - (void)_setup {
+    self.parallaxHeight = 170;
+    self.offsetHeight = 20;
+    
     _bannerView = [[UIView alloc] initWithFrame:self.bounds];
+    _bannerView.clipsToBounds = YES;
     _bannerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -self.parallaxHeight, CGRectGetWidth(_bannerView.frame), CGRectGetHeight(_bannerView.frame) + self.parallaxHeight * 2)];
     _bannerImageView.contentMode = UIViewContentModeScaleToFill;
     [_bannerView addSubview:self.bannerImageView];
@@ -108,9 +114,14 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     _avatarButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 18, 66, 66)];
     
     _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(93, 18, 207, 34)];
+    _userNameLabel.textColor = [UIColor whiteColor];
+    _userNameLabel.backgroundColor = [UIColor blackColor];
     
     _birthdayLabel = [[UILabel alloc] initWithFrame:CGRectMake(93, 60, 207, 24)];
+    _birthdayLabel.textColor = [UIColor whiteColor];
+    _birthdayLabel.backgroundColor = [UIColor blackColor];
     
+    [_showView addSubview:self.avatarButton];
     [_showView addSubview:self.userNameLabel];
     [_showView addSubview:self.birthdayLabel];
     
@@ -118,10 +129,8 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     
     CGFloat waterDropRefreshHeight = 100;
     _waterDropRefresh = [[XHWaterDropRefresh alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - waterDropRefreshHeight, 20, waterDropRefreshHeight)];
+    _waterDropRefresh.offsetHeight = self.offsetHeight;
     [self addSubview:self.waterDropRefresh];
-    
-    self.offsetHeight = 20;
-    self.parallaxHeight = 170;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -135,8 +144,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     __weak XHPathWaterDropRefreshHeadInfoView *wself =self;
     [_waterDropRefresh setHandleRefreshEvent:^{
         [wself setIsRefreshed:YES];
-        if(wself.handleRefreshEvent)
-        {
+        if(wself.handleRefreshEvent) {
             wself.handleRefreshEvent();
         }
     }];
@@ -152,32 +160,24 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     }
 }
 
--(void)setTouching:(BOOL)touching
-{
-    if(touching)
-    {
-        if(hasStop)
-        {
+- (void)setTouching:(BOOL)touching {
+    if(touching) {
+        if(hasStop) {
             [self resetTouch];
         }
         
-        if(touch1)
-        {
+        if(touch1) {
             touch2 = YES;
-        }
-        else if(touch2 == NO && _waterDropRefresh.isRefreshing == NO)
-        {
+        } else if (touch2 == NO && _waterDropRefresh.isRefreshing == NO) {
             touch1 = YES;
         }
-    }
-    else if(_waterDropRefresh.isRefreshing == NO)
-    {
+    } else if(_waterDropRefresh.isRefreshing == NO) {
         [self resetTouch];
     }
     _touching = touching;
 }
--(void)resetTouch
-{
+
+- (void)resetTouch {
     touch1 = NO;
     touch2 = NO;
     hasStop = NO;
