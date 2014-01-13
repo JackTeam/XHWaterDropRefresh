@@ -22,6 +22,7 @@
 		AB8497461883FB400080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
 		AB84974E1883FB400080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84974C1883FB400080B16E /* InfoPlist.strings */; };
 		AB8497501883FB400080B16E /* XHWaterDropRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */; };
+		AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		AB84974B1883FB400080B16E /* XHWaterDropRefreshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XHWaterDropRefreshTests-Info.plist"; sourceTree = "<group>"; };
 		AB84974D1883FB400080B16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefreshTests.m; sourceTree = "<group>"; };
+		AB84975A1884004A0080B16E /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
+		AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		AB8497151883FB3F0080B16E = {
 			isa = PBXGroup;
 			children = (
+				AB8497591884001E0080B16E /* Source */,
 				AB8497271883FB3F0080B16E /* XHWaterDropRefresh */,
 				AB8497491883FB400080B16E /* XHWaterDropRefreshTests */,
 				AB8497201883FB3F0080B16E /* Frameworks */,
@@ -153,6 +157,16 @@
 				AB84974C1883FB400080B16E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB8497591884001E0080B16E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AB84975A1884004A0080B16E /* XHWaterDropRefresh.h */,
+				AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */,
+			);
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,7 @@
 			files = (
 				AB84973B1883FB3F0080B16E /* ViewController.m in Sources */,
 				AB8497321883FB3F0080B16E /* AppDelegate.m in Sources */,
+				AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */,
 				AB84972E1883FB3F0080B16E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +489,7 @@
 				AB8497551883FB400080B16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB8497561883FB400080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +498,7 @@
 				AB8497581883FB400080B16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
