@@ -23,6 +23,7 @@
 		AB84974E1883FB400080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84974C1883FB400080B16E /* InfoPlist.strings */; };
 		AB8497501883FB400080B16E /* XHWaterDropRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */; };
 		AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
+		AB84975F188400E20080B16E /* XHTableViewHeadInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975E188400E20080B16E /* XHTableViewHeadInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefreshTests.m; sourceTree = "<group>"; };
 		AB84975A1884004A0080B16E /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
 		AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
+		AB84975D188400E20080B16E /* XHTableViewHeadInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHTableViewHeadInfoView.h; sourceTree = "<group>"; };
+		AB84975E188400E20080B16E /* XHTableViewHeadInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTableViewHeadInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				AB84975A1884004A0080B16E /* XHWaterDropRefresh.h */,
 				AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */,
+				AB84975D188400E20080B16E /* XHTableViewHeadInfoView.h */,
+				AB84975E188400E20080B16E /* XHTableViewHeadInfoView.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -271,6 +276,7 @@
 				AB8497321883FB3F0080B16E /* AppDelegate.m in Sources */,
 				AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */,
 				AB84972E1883FB3F0080B16E /* main.m in Sources */,
+				AB84975F188400E20080B16E /* XHTableViewHeadInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
