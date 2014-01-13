@@ -4,9 +4,9 @@ XHWaterDropRefresh
 ## English
 XHWaterDropRefresh is a similar Path 's dropdown refresh component.       
 Has the following functions:         
-1, set the drop size/water droplets pull-apart distance/water droplets deformation length         
-2, parallax effect in background         
-3, in the parallax effect background inside display Avatar        
+1、set the drop size/water droplets pull-apart distance/water droplets deformation length         
+2、parallax effect in background         
+3、in the parallax effect background inside display Avatar        
 
 
 ## 中文
