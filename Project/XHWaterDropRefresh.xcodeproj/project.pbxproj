@@ -24,6 +24,19 @@
 		AB8497501883FB400080B16E /* XHWaterDropRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */; };
 		AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
 		AB84975F188400E20080B16E /* XHTableViewHeadInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975E188400E20080B16E /* XHTableViewHeadInfoView.m */; };
+		AB849765188406E30080B16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497211883FB3F0080B16E /* Foundation.framework */; };
+		AB849766188406E30080B16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497231883FB3F0080B16E /* CoreGraphics.framework */; };
+		AB849767188406E30080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
+		AB84976D188406E30080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84976B188406E30080B16E /* InfoPlist.strings */; };
+		AB84976F188406E30080B16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84976E188406E30080B16E /* main.m */; };
+		AB849773188406E30080B16E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB849772188406E30080B16E /* AppDelegate.m */; };
+		AB84977C188406E30080B16E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84977B188406E30080B16E /* ViewController.m */; };
+		AB84977E188406E30080B16E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB84977D188406E30080B16E /* Images.xcassets */; };
+		AB849784188406E30080B16E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497431883FB400080B16E /* XCTest.framework */; };
+		AB849785188406E30080B16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497211883FB3F0080B16E /* Foundation.framework */; };
+		AB849786188406E30080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
+		AB84978E188406E30080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84978C188406E30080B16E /* InfoPlist.strings */; };
+		AB849790188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84978F188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +47,17 @@
 			remoteGlobalIDString = AB84971D1883FB3F0080B16E;
 			remoteInfo = XHWaterDropRefresh;
 		};
+		AB849787188406E30080B16E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB8497161883FB3F0080B16E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB849763188406E20080B16E;
+			remoteInfo = XHWaterDropRefreshCodeExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB84971E1883FB3F0080B16E /* XHWaterDropRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHWaterDropRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB84971E1883FB3F0080B16E /* XHWaterDropRefreshstoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHWaterDropRefreshstoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8497211883FB3F0080B16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB8497231883FB3F0080B16E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AB8497251883FB3F0080B16E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -61,6 +81,20 @@
 		AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
 		AB84975D188400E20080B16E /* XHTableViewHeadInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHTableViewHeadInfoView.h; sourceTree = "<group>"; };
 		AB84975E188400E20080B16E /* XHTableViewHeadInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTableViewHeadInfoView.m; sourceTree = "<group>"; };
+		AB849764188406E30080B16E /* XHWaterDropRefreshCodeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHWaterDropRefreshCodeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB84976A188406E30080B16E /* XHWaterDropRefreshCodeExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XHWaterDropRefreshCodeExample-Info.plist"; sourceTree = "<group>"; };
+		AB84976C188406E30080B16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB84976E188406E30080B16E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB849770188406E30080B16E /* XHWaterDropRefreshCodeExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XHWaterDropRefreshCodeExample-Prefix.pch"; sourceTree = "<group>"; };
+		AB849771188406E30080B16E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB849772188406E30080B16E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB84977A188406E30080B16E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AB84977B188406E30080B16E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB84977D188406E30080B16E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AB849783188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHWaterDropRefreshCodeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB84978B188406E30080B16E /* XHWaterDropRefreshCodeExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XHWaterDropRefreshCodeExampleTests-Info.plist"; sourceTree = "<group>"; };
+		AB84978D188406E30080B16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB84978F188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefreshCodeExampleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +118,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB849761188406E20080B16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB849766188406E30080B16E /* CoreGraphics.framework in Frameworks */,
+				AB849767188406E30080B16E /* UIKit.framework in Frameworks */,
+				AB849765188406E30080B16E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB849780188406E30080B16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB849784188406E30080B16E /* XCTest.framework in Frameworks */,
+				AB849786188406E30080B16E /* UIKit.framework in Frameworks */,
+				AB849785188406E30080B16E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +147,8 @@
 				AB8497591884001E0080B16E /* Source */,
 				AB8497271883FB3F0080B16E /* XHWaterDropRefresh */,
 				AB8497491883FB400080B16E /* XHWaterDropRefreshTests */,
+				AB849768188406E30080B16E /* XHWaterDropRefreshCodeExample */,
+				AB849789188406E30080B16E /* XHWaterDropRefreshCodeExampleTests */,
 				AB8497201883FB3F0080B16E /* Frameworks */,
 				AB84971F1883FB3F0080B16E /* Products */,
 			);
@@ -101,8 +157,10 @@
 		AB84971F1883FB3F0080B16E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB84971E1883FB3F0080B16E /* XHWaterDropRefresh.app */,
+				AB84971E1883FB3F0080B16E /* XHWaterDropRefreshstoryboard.app */,
 				AB8497421883FB400080B16E /* XHWaterDropRefreshTests.xctest */,
+				AB849764188406E30080B16E /* XHWaterDropRefreshCodeExample.app */,
+				AB849783188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,12 +232,54 @@
 			path = ../Source;
 			sourceTree = "<group>";
 		};
+		AB849768188406E30080B16E /* XHWaterDropRefreshCodeExample */ = {
+			isa = PBXGroup;
+			children = (
+				AB849771188406E30080B16E /* AppDelegate.h */,
+				AB849772188406E30080B16E /* AppDelegate.m */,
+				AB84977A188406E30080B16E /* ViewController.h */,
+				AB84977B188406E30080B16E /* ViewController.m */,
+				AB84977D188406E30080B16E /* Images.xcassets */,
+				AB849769188406E30080B16E /* Supporting Files */,
+			);
+			path = XHWaterDropRefreshCodeExample;
+			sourceTree = "<group>";
+		};
+		AB849769188406E30080B16E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB84976A188406E30080B16E /* XHWaterDropRefreshCodeExample-Info.plist */,
+				AB84976B188406E30080B16E /* InfoPlist.strings */,
+				AB84976E188406E30080B16E /* main.m */,
+				AB849770188406E30080B16E /* XHWaterDropRefreshCodeExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB849789188406E30080B16E /* XHWaterDropRefreshCodeExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB84978F188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m */,
+				AB84978A188406E30080B16E /* Supporting Files */,
+			);
+			path = XHWaterDropRefreshCodeExampleTests;
+			sourceTree = "<group>";
+		};
+		AB84978A188406E30080B16E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB84978B188406E30080B16E /* XHWaterDropRefreshCodeExampleTests-Info.plist */,
+				AB84978C188406E30080B16E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB84971D1883FB3F0080B16E /* XHWaterDropRefresh */ = {
+		AB84971D1883FB3F0080B16E /* XHWaterDropRefreshstoryboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB8497531883FB400080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefresh" */;
+			buildConfigurationList = AB8497531883FB400080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshstoryboard" */;
 			buildPhases = (
 				AB84971A1883FB3F0080B16E /* Sources */,
 				AB84971B1883FB3F0080B16E /* Frameworks */,
@@ -189,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = XHWaterDropRefresh;
+			name = XHWaterDropRefreshstoryboard;
 			productName = XHWaterDropRefresh;
-			productReference = AB84971E1883FB3F0080B16E /* XHWaterDropRefresh.app */;
+			productReference = AB84971E1883FB3F0080B16E /* XHWaterDropRefreshstoryboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AB8497411883FB400080B16E /* XHWaterDropRefreshTests */ = {
@@ -212,6 +312,41 @@
 			productReference = AB8497421883FB400080B16E /* XHWaterDropRefreshTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AB849763188406E20080B16E /* XHWaterDropRefreshCodeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB849791188406E40080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshCodeExample" */;
+			buildPhases = (
+				AB849760188406E20080B16E /* Sources */,
+				AB849761188406E20080B16E /* Frameworks */,
+				AB849762188406E20080B16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XHWaterDropRefreshCodeExample;
+			productName = XHWaterDropRefreshCodeExample;
+			productReference = AB849764188406E30080B16E /* XHWaterDropRefreshCodeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB849782188406E30080B16E /* XHWaterDropRefreshCodeExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB849794188406E40080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshCodeExampleTests" */;
+			buildPhases = (
+				AB84977F188406E30080B16E /* Sources */,
+				AB849780188406E30080B16E /* Frameworks */,
+				AB849781188406E30080B16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB849788188406E30080B16E /* PBXTargetDependency */,
+			);
+			name = XHWaterDropRefreshCodeExampleTests;
+			productName = XHWaterDropRefreshCodeExampleTests;
+			productReference = AB849783188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +357,9 @@
 				ORGANIZATIONNAME = "曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507";
 				TargetAttributes = {
 					AB8497411883FB400080B16E = {
+						TestTargetID = AB84971D1883FB3F0080B16E;
+					};
+					AB849782188406E30080B16E = {
 						TestTargetID = AB84971D1883FB3F0080B16E;
 					};
 				};
@@ -239,8 +377,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB84971D1883FB3F0080B16E /* XHWaterDropRefresh */,
+				AB84971D1883FB3F0080B16E /* XHWaterDropRefreshstoryboard */,
 				AB8497411883FB400080B16E /* XHWaterDropRefreshTests */,
+				AB849763188406E20080B16E /* XHWaterDropRefreshCodeExample */,
+				AB849782188406E30080B16E /* XHWaterDropRefreshCodeExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +402,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB84974E1883FB400080B16E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB849762188406E20080B16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB84977E188406E30080B16E /* Images.xcassets in Resources */,
+				AB84976D188406E30080B16E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB849781188406E30080B16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB84978E188406E30080B16E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,13 +445,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB849760188406E20080B16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB84977C188406E30080B16E /* ViewController.m in Sources */,
+				AB849773188406E30080B16E /* AppDelegate.m in Sources */,
+				AB84976F188406E30080B16E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB84977F188406E30080B16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB849790188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		AB8497481883FB400080B16E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB84971D1883FB3F0080B16E /* XHWaterDropRefresh */;
+			target = AB84971D1883FB3F0080B16E /* XHWaterDropRefreshstoryboard */;
 			targetProxy = AB8497471883FB400080B16E /* PBXContainerItemProxy */;
+		};
+		AB849788188406E30080B16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB849763188406E20080B16E /* XHWaterDropRefreshCodeExample */;
+			targetProxy = AB849787188406E30080B16E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -327,6 +507,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				AB84974D1883FB400080B16E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB84976B188406E30080B16E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB84976C188406E30080B16E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB84978C188406E30080B16E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB84978D188406E30080B16E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -411,11 +607,13 @@
 		AB8497541883FB400080B16E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XHWaterDropRefresh/XHWaterDropRefresh-Prefix.pch";
 				INFOPLIST_FILE = "XHWaterDropRefresh/XHWaterDropRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,11 +622,13 @@
 		AB8497551883FB400080B16E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XHWaterDropRefresh/XHWaterDropRefresh-Prefix.pch";
 				INFOPLIST_FILE = "XHWaterDropRefresh/XHWaterDropRefresh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,6 +676,80 @@
 			};
 			name = Release;
 		};
+		AB849792188406E40080B16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB849793188406E40080B16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Prefix.pch";
+				INFOPLIST_FILE = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AB849795188406E40080B16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XHWaterDropRefresh.app/XHWaterDropRefresh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "XHWaterDropRefreshCodeExampleTests/XHWaterDropRefreshCodeExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AB849796188406E40080B16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XHWaterDropRefresh.app/XHWaterDropRefresh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XHWaterDropRefreshCodeExample/XHWaterDropRefreshCodeExample-Prefix.pch";
+				INFOPLIST_FILE = "XHWaterDropRefreshCodeExampleTests/XHWaterDropRefreshCodeExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB8497531883FB400080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefresh" */ = {
+		AB8497531883FB400080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshstoryboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB8497541883FB400080B16E /* Debug */,
@@ -505,6 +779,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AB849791188406E40080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshCodeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB849792188406E40080B16E /* Debug */,
+				AB849793188406E40080B16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB849794188406E40080B16E /* Build configuration list for PBXNativeTarget "XHWaterDropRefreshCodeExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB849795188406E40080B16E /* Debug */,
+				AB849796188406E40080B16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
