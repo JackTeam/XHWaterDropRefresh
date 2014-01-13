@@ -52,7 +52,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     _pathWaterDropRefreshHeadInfoView.offsetY = scrollView.contentOffset.y;
-    
+    NSString *asd = nil;
+
     CGFloat padding = 80.0;
     CGFloat mub = 1.15;
     if(scrollView.contentOffset.y < 0 && scrollView.contentOffset.y >= -padding) {

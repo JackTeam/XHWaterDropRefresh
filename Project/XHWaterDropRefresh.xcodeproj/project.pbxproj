@@ -27,8 +27,6 @@
 		AB84972C1883FB3F0080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84972A1883FB3F0080B16E /* InfoPlist.strings */; };
 		AB84972E1883FB3F0080B16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84972D1883FB3F0080B16E /* main.m */; };
 		AB8497321883FB3F0080B16E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497311883FB3F0080B16E /* AppDelegate.m */; };
-		AB8497351883FB3F0080B16E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8497331883FB3F0080B16E /* Main_iPhone.storyboard */; };
-		AB8497381883FB3F0080B16E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8497361883FB3F0080B16E /* Main_iPad.storyboard */; };
 		AB84973B1883FB3F0080B16E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84973A1883FB3F0080B16E /* ViewController.m */; };
 		AB84973D1883FB3F0080B16E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB84973C1883FB3F0080B16E /* Images.xcassets */; };
 		AB8497441883FB400080B16E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497431883FB400080B16E /* XCTest.framework */; };
@@ -49,6 +47,8 @@
 		AB849786188406E30080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
 		AB84978E188406E30080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84978C188406E30080B16E /* InfoPlist.strings */; };
 		AB849790188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84978F188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m */; };
+		ABABF5341884460400710D2F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABABF5321884460400710D2F /* Main_iPad.storyboard */; };
+		ABABF5351884460400710D2F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABABF5331884460400710D2F /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +86,6 @@
 		AB84972F1883FB3F0080B16E /* XHWaterDropRefresh-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XHWaterDropRefresh-Prefix.pch"; sourceTree = "<group>"; };
 		AB8497301883FB3F0080B16E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB8497311883FB3F0080B16E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB8497341883FB3F0080B16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		AB8497371883FB3F0080B16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		AB8497391883FB3F0080B16E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AB84973A1883FB3F0080B16E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB84973C1883FB3F0080B16E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -112,6 +110,8 @@
 		AB84978B188406E30080B16E /* XHWaterDropRefreshCodeExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XHWaterDropRefreshCodeExampleTests-Info.plist"; sourceTree = "<group>"; };
 		AB84978D188406E30080B16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB84978F188406E30080B16E /* XHWaterDropRefreshCodeExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefreshCodeExampleTests.m; sourceTree = "<group>"; };
+		ABABF5321884460400710D2F /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		ABABF5331884460400710D2F /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,10 +210,10 @@
 			children = (
 				AB8497301883FB3F0080B16E /* AppDelegate.h */,
 				AB8497311883FB3F0080B16E /* AppDelegate.m */,
-				AB8497331883FB3F0080B16E /* Main_iPhone.storyboard */,
-				AB8497361883FB3F0080B16E /* Main_iPad.storyboard */,
 				AB8497391883FB3F0080B16E /* ViewController.h */,
 				AB84973A1883FB3F0080B16E /* ViewController.m */,
+				ABABF5321884460400710D2F /* Main_iPad.storyboard */,
+				ABABF5331884460400710D2F /* Main_iPhone.storyboard */,
 				AB84973C1883FB3F0080B16E /* Images.xcassets */,
 				AB8497281883FB3F0080B16E /* Supporting Files */,
 			);
@@ -421,12 +421,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB30D14F188433520052BBAA /* first_timetowlight@2x.png in Resources */,
-				AB8497381883FB3F0080B16E /* Main_iPad.storyboard in Resources */,
 				AB84973D1883FB3F0080B16E /* Images.xcassets in Resources */,
 				AB30D14D188433520052BBAA /* first_timetowlight.png in Resources */,
 				AB30D151188433520052BBAA /* meicon.png in Resources */,
-				AB8497351883FB3F0080B16E /* Main_iPhone.storyboard in Resources */,
 				AB84972C1883FB3F0080B16E /* InfoPlist.strings in Resources */,
+				ABABF5351884460400710D2F /* Main_iPhone.storyboard in Resources */,
+				ABABF5341884460400710D2F /* Main_iPad.storyboard in Resources */,
 				AB30D153188433520052BBAA /* MenuBackground@2x.png in Resources */,
 				AB30D156188440AE0052BBAA /* Background.jpg in Resources */,
 			);
@@ -527,22 +527,6 @@
 				AB84972B1883FB3F0080B16E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AB8497331883FB3F0080B16E /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB8497341883FB3F0080B16E /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		AB8497361883FB3F0080B16E /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB8497371883FB3F0080B16E /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		AB84974C1883FB400080B16E /* InfoPlist.strings */ = {
