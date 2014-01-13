@@ -10,8 +10,9 @@
 
 @interface XHWaterDropRefresh : UIView
 
-@property (nonatomic, assign) CGFloat radius;
-@property (nonatomic, assign) CGFloat maxOffset;
+@property (nonatomic, assign) CGFloat radius; // default is 5.
+@property (nonatomic, assign) CGFloat maxOffset; // default is 64
+@property (nonatomic, assign) CGFloat deformationLength; // default is 0.4 (between 0.1 -- 0.9)
 @property (nonatomic, readonly) BOOL isRefreshing;
 
 - (void)stopRefresh;
