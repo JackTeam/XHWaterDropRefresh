@@ -20,7 +20,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.title = @"XHWaterDropRefresh";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     
     _pathWaterDropRefreshHeadInfoView = [[XHPathWaterDropRefreshHeadInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
     [_pathWaterDropRefreshHeadInfoView setBackgroundImage:[UIImage imageNamed:@"MenuBackground"]];
