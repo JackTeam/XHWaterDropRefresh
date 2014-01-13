@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB30D14418842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30D14318842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m */; };
 		AB30D14518842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30D14318842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m */; };
+		AB30D1461884323C0052BBAA /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
+		AB30D147188432540052BBAA /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
 		AB8497221883FB3F0080B16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497211883FB3F0080B16E /* Foundation.framework */; };
 		AB8497241883FB3F0080B16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497231883FB3F0080B16E /* CoreGraphics.framework */; };
 		AB8497261883FB3F0080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
@@ -24,7 +26,6 @@
 		AB8497461883FB400080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
 		AB84974E1883FB400080B16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84974C1883FB400080B16E /* InfoPlist.strings */; };
 		AB8497501883FB400080B16E /* XHWaterDropRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84974F1883FB400080B16E /* XHWaterDropRefreshTests.m */; };
-		AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84975B1884004A0080B16E /* XHWaterDropRefresh.m */; };
 		AB849765188406E30080B16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497211883FB3F0080B16E /* Foundation.framework */; };
 		AB849766188406E30080B16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497231883FB3F0080B16E /* CoreGraphics.framework */; };
 		AB849767188406E30080B16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8497251883FB3F0080B16E /* UIKit.framework */; };
@@ -430,10 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB30D1461884323C0052BBAA /* XHWaterDropRefresh.m in Sources */,
 				AB84973B1883FB3F0080B16E /* ViewController.m in Sources */,
 				AB8497321883FB3F0080B16E /* AppDelegate.m in Sources */,
 				AB30D14418842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m in Sources */,
-				AB84975C1884004A0080B16E /* XHWaterDropRefresh.m in Sources */,
 				AB84972E1883FB3F0080B16E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB30D147188432540052BBAA /* XHWaterDropRefresh.m in Sources */,
 				AB30D14518842ECE0052BBAA /* XHPathWaterDropRefreshHeadInfoView.m in Sources */,
 				AB84977C188406E30080B16E /* ViewController.m in Sources */,
 				AB849773188406E30080B16E /* AppDelegate.m in Sources */,

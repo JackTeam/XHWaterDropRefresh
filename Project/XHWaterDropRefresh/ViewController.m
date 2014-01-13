@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "XHPathWaterDropRefreshHeadInfoView.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) XHPathWaterDropRefreshHeadInfoView *pathWaterDropRefreshHeadInfoView;
 @end
 
 @implementation ViewController
@@ -19,12 +20,44 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.title = @"XHWaterDropRefresh";
+    
+    _pathWaterDropRefreshHeadInfoView = [[XHPathWaterDropRefreshHeadInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
+    self.tableView.tableHeaderView = self.pathWaterDropRefreshHeadInfoView;
+    
+    __weak ViewController *wself = self;
+    [_pathWaterDropRefreshHeadInfoView setHandleRefreshEvent:^{
+        double delayInSeconds = 4.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [wself.pathWaterDropRefreshHeadInfoView stopRefresh];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark- scroll delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.offsetY = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.touching = NO;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if(decelerate == NO) {
+        _pathWaterDropRefreshHeadInfoView.touching = NO;
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _pathWaterDropRefreshHeadInfoView.touching = YES;
 }
 
 #pragma mark - TableView DataSource
@@ -44,6 +77,5 @@
     
     return cell;
 }
-
 
 @end
