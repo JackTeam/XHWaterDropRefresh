@@ -9,6 +9,9 @@
 #import "XHTableViewHeadInfoView.h"
 #import "XHWaterDropRefresh.h"
 
+NSString *const XHUserNameKey = @"XHUserName";
+NSString *const XHBirthdayKey = @"XHBirthday";
+
 @interface XHTableViewHeadInfoView () {
     BOOL touch1, touch2, hasStop;
     BOOL isrefreshed;
@@ -35,10 +38,6 @@
     
 }
 
-- (void)reloadData {
-    
-}
-
 // background
 - (void)setBackgroundImage:(UIImage *)backgroundImage {
     
@@ -59,17 +58,22 @@
 
 // set info
 - (void)setInfo:(NSDictionary *)info {
+    NSString *userName = [info valueForKey:XHUserNameKey];
+    if (userName) {
+        self.userNameLabel.text = userName;
+    }
     
+    NSString *birthday = [info valueForKey:XHBirthdayKey];
+    if (birthday) {
+        self.birthdayLabel.text = birthday;
+    }
 }
 
 #pragma mark - Propertys
 
-- (void)setTableViewHeadInfoViewHeight:(CGFloat)tableViewHeadInfoViewHeight {
-    _tableViewHeadInfoViewHeight = tableViewHeadInfoViewHeight;
-    
-    CGRect tableViewHeadInfoViewFrame = self.frame;
-    tableViewHeadInfoViewFrame.size.height = _tableViewHeadInfoViewHeight;
-    self.frame = tableViewHeadInfoViewFrame;
+- (void)setOffsetHeight:(CGFloat)offsetHeight {
+    _offsetHeight = offsetHeight;
+    self.waterDropRefresh.offsetHeight = _offsetHeight;
 }
 
 #pragma mark - Life cycle
@@ -95,13 +99,14 @@
 }
 
 - (void)_setup {
-    _bannerView = [[UIView alloc] initWithFrame:CGRectZero];
-    _bannerImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    _bannerView = [[UIView alloc] initWithFrame:self.bounds];
+    _bannerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -self.parallaxHeight, CGRectGetWidth(_bannerView.frame), CGRectGetHeight(_bannerView.frame) + self.parallaxHeight * 2)];
     _bannerImageView.contentMode = UIViewContentModeScaleToFill;
     [_bannerView addSubview:self.bannerImageView];
     [self addSubview:self.bannerView];
     
-    _showView = [[UIView alloc] initWithFrame:CGRectZero];
+    CGFloat padding = 20;
+    _showView = [[UIView alloc] initWithFrame:CGRectMake(0, padding, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - padding * 2)];
     _showView.backgroundColor = [UIColor clearColor];
     
     _avatarButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 18, 66, 66)];
@@ -114,6 +119,13 @@
     [_showView addSubview:self.birthdayLabel];
     
     [self addSubview:self.showView];
+    
+    CGFloat waterDropRefreshHeight = 100;
+    _waterDropRefresh = [[XHWaterDropRefresh alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - waterDropRefreshHeight, 20, waterDropRefreshHeight)];
+    [self addSubview:self.waterDropRefresh];
+    
+    self.offsetHeight = 20;
+    self.parallaxHeight = 170;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -185,31 +197,30 @@
     }
 }
 
-- (void)setOffsetY:(float)y {
+- (void)setOffsetY:(CGFloat)y {
     _offsetY = y;
     CGRect frame = _showView.frame;
     if(y < 0) {
         if((_waterView.isRefreshing) || hasStop) {
             if(touch1 && touch2 == NO) {
-                frame.origin.y = 20 + y;
+                frame.origin.y = self.offsetHeight + y;
                 _showView.frame = frame;
             } else {
-                if(frame.origin.y != 20)
-                {
-                    frame.origin.y = 20;
+                if(frame.origin.y != self.offsetHeight) {
+                    frame.origin.y = self.offsetHeight;
                     _showView.frame = frame;
                 }
             }
         } else {
-            frame.origin.y = 20+y;
+            frame.origin.y = self.offsetHeight + y;
             _showView.frame = frame;
         }
     } else {
         if(touch1 && _touching && isrefreshed) {
             touch2 = YES;
         }
-        if(frame.origin.y != 20) {
-            frame.origin.y = 20;
+        if(frame.origin.y != self.offsetHeight) {
+            frame.origin.y = self.offsetHeight;
             _showView.frame = frame;
         }
     }
@@ -217,26 +228,26 @@
         _waterView.currentOffset = y;
     }
     
-    UIView* bannerSuper = _img_banner.superview;
+    UIView *bannerSuper = _bannerImageView.superview;
     CGRect bframe = bannerSuper.frame;
     if(y < 0) {
         bframe.origin.y = y;
         bframe.size.height = -y + bannerSuper.superview.frame.size.height;
         bannerSuper.frame = bframe;
         
-        CGPoint center =  _img_banner.center;
-        center.y = bannerSuper.frame.size.height/2;
-        _img_banner.center = center;
+        CGPoint center =  _bannerImageView.center;
+        center.y = bannerSuper.frame.size.height / 2;
+        _bannerImageView.center = center;
     } else {
         if(bframe.origin.y != 0) {
             bframe.origin.y = 0;
             bframe.size.height = bannerSuper.superview.frame.size.height;
             bannerSuper.frame = bframe;
         }
-        if(y<bframe.size.height) {
-            CGPoint center =  _img_banner.center;
-            center.y = bannerSuper.frame.size.height/2 + 0.5*y;
-            _img_banner.center = center;
+        if(y < bframe.size.height) {
+            CGPoint center =  _bannerImageView.center;
+            center.y = bannerSuper.frame.size.height/2 + 0.5 * y;
+            _bannerImageView.center = center;
         }
     }
 }

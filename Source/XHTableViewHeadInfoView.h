@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const XHUserNameKey;
+extern NSString *const XHBirthdayKey;
+
 @interface XHTableViewHeadInfoView : UIView
 
 //scrollView call back
 @property (nonatomic) BOOL touching;
-@property (nonatomic) float offsetY;
+@property (nonatomic) CGFloat offsetY;
 
-@property (nonatomic, assign) CGFloat tableViewHeadInfoViewHeight;
+
+@property (nonatomic, assign) CGFloat offsetHeight; // default is 20
+@property (nonatomic, assign) CGFloat parallaxHeight; // default is 170
 
 @property (nonatomic, copy) void(^handleRefreshEvent)(void);
 
 - (void)stopRefresh;
-
-- (void)reloadData;
 
 // background
 - (void)setBackgroundImage:(UIImage *)backgroundImage;
